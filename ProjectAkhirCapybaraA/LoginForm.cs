@@ -32,8 +32,8 @@ namespace ProjectAkhirCapybaraA
                 // Jika benar, tampilkan pesan berhasil dan lanjut ke halaman utama
                 MessageBox.Show("Login berhasil!");
                 // Ganti "HomePageForm" dengan nama form halaman utama Anda
-                HomePageForm homePage = new HomePageForm();
-                homePage.Show();
+                OptionPageForm optionPage = new OptionPageForm();
+                optionPage.Show();
                 this.Hide();
             }
             else

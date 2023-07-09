@@ -51,5 +51,12 @@ namespace ProjectAkhirCapybaraA
             PemilikPage.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            OptionPageForm optionPage = new OptionPageForm();
+            this.Close();
+            optionPage.Show();
+        }
     }
 }

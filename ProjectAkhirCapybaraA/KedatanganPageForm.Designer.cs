@@ -1,6 +1,6 @@
 ﻿namespace ProjectAkhirCapybaraA
 {
-    partial class KurirPageForm
+    partial class KedatanganPageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KurirPageForm));
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.idkurirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namakurirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jeniskelaminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asalkurirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notelpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kurirBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gudanginventoryDataSet = new ProjectAkhirCapybaraA.gudanginventoryDataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KedatanganPageForm));
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.kurirTableAdapter = new ProjectAkhirCapybaraA.gudanginventoryDataSetTableAdapters.kurirTableAdapter();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,12 +40,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.idKurirTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.noTelpTextBox = new System.Windows.Forms.TextBox();
-            this.asalTextBox = new System.Windows.Forms.TextBox();
-            this.jenisKelaminTextBox = new System.Windows.Forms.TextBox();
-            this.namaTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.idGudangTextBox = new System.Windows.Forms.TextBox();
+            this.idKedatanganTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -68,246 +57,169 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kurirBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gudanginventoryDataSet)).BeginInit();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.gudanginventoryDataSet = new ProjectAkhirCapybaraA.gudanginventoryDataSet();
+            this.kedatanganBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kedatanganTableAdapter = new ProjectAkhirCapybaraA.gudanginventoryDataSetTableAdapters.kedatanganTableAdapter();
+            this.idkedatanganDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgldatangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idgudangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idkurirDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gudangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gudangTableAdapter = new ProjectAkhirCapybaraA.gudanginventoryDataSetTableAdapters.gudangTableAdapter();
+            this.kurirBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kurirTableAdapter = new ProjectAkhirCapybaraA.gudanginventoryDataSetTableAdapters.kurirTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gudanginventoryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kedatanganBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gudangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kurirBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dateTimePicker1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(400, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 59);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Data Kurir";
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AutoGenerateColumns = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idkurirDataGridViewTextBoxColumn,
-            this.namakurirDataGridViewTextBoxColumn,
-            this.jeniskelaminDataGridViewTextBoxColumn,
-            this.asalkurirDataGridViewTextBoxColumn,
-            this.notelpDataGridViewTextBoxColumn});
-            this.dataGridView.DataSource = this.kurirBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(61, 141);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(988, 150);
-            this.dataGridView.TabIndex = 9;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idkurirDataGridViewTextBoxColumn
-            // 
-            this.idkurirDataGridViewTextBoxColumn.DataPropertyName = "Id_kurir";
-            this.idkurirDataGridViewTextBoxColumn.HeaderText = "Id_kurir";
-            this.idkurirDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idkurirDataGridViewTextBoxColumn.Name = "idkurirDataGridViewTextBoxColumn";
-            this.idkurirDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namakurirDataGridViewTextBoxColumn
-            // 
-            this.namakurirDataGridViewTextBoxColumn.DataPropertyName = "Nama_kurir";
-            this.namakurirDataGridViewTextBoxColumn.HeaderText = "Nama_kurir";
-            this.namakurirDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namakurirDataGridViewTextBoxColumn.Name = "namakurirDataGridViewTextBoxColumn";
-            this.namakurirDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jeniskelaminDataGridViewTextBoxColumn
-            // 
-            this.jeniskelaminDataGridViewTextBoxColumn.DataPropertyName = "jenis_kelamin";
-            this.jeniskelaminDataGridViewTextBoxColumn.HeaderText = "jenis_kelamin";
-            this.jeniskelaminDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jeniskelaminDataGridViewTextBoxColumn.Name = "jeniskelaminDataGridViewTextBoxColumn";
-            this.jeniskelaminDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // asalkurirDataGridViewTextBoxColumn
-            // 
-            this.asalkurirDataGridViewTextBoxColumn.DataPropertyName = "asal_kurir";
-            this.asalkurirDataGridViewTextBoxColumn.HeaderText = "asal_kurir";
-            this.asalkurirDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.asalkurirDataGridViewTextBoxColumn.Name = "asalkurirDataGridViewTextBoxColumn";
-            this.asalkurirDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // notelpDataGridViewTextBoxColumn
-            // 
-            this.notelpDataGridViewTextBoxColumn.DataPropertyName = "No_telp";
-            this.notelpDataGridViewTextBoxColumn.HeaderText = "No_telp";
-            this.notelpDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.notelpDataGridViewTextBoxColumn.Name = "notelpDataGridViewTextBoxColumn";
-            this.notelpDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // kurirBindingSource
-            // 
-            this.kurirBindingSource.DataMember = "kurir";
-            this.kurirBindingSource.DataSource = this.gudanginventoryDataSet;
-            // 
-            // gudanginventoryDataSet
-            // 
-            this.gudanginventoryDataSet.DataSetName = "gudanginventoryDataSet";
-            this.gudanginventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dateTimePicker1.Location = new System.Drawing.Point(286, 407);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(254, 22);
+            this.dateTimePicker1.TabIndex = 95;
             // 
             // button1
             // 
             this.button1.Image = global::ProjectAkhirCapybaraA.Properties.Resources.arrow_arrows_back_direction_left_navigation_right_icon_123237;
-            this.button1.Location = new System.Drawing.Point(38, 798);
+            this.button1.Location = new System.Drawing.Point(28, 715);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 40);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 94;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // kurirTableAdapter
-            // 
-            this.kurirTableAdapter.ClearBeforeFill = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(197, 581);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 16);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "No telp";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(196, 531);
+            this.label5.Location = new System.Drawing.Point(103, 515);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Asal kurir";
+            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.TabIndex = 90;
+            this.label5.Text = "Id kurir";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(196, 479);
+            this.label4.Location = new System.Drawing.Point(103, 463);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 16);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Jenis kelamin";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 91;
+            this.label4.Text = "Id gudang";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 429);
+            this.label3.Location = new System.Drawing.Point(103, 413);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Nama kurir";
+            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Tanggal datang";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 377);
+            this.label2.Location = new System.Drawing.Point(103, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Id kurir";
+            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "Id kedatangan";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(392, 663);
+            this.button6.Location = new System.Drawing.Point(302, 569);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(120, 57);
-            this.button6.TabIndex = 43;
+            this.button6.TabIndex = 85;
             this.button6.Text = "Clear";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(605, 663);
+            this.button5.Location = new System.Drawing.Point(509, 569);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(120, 57);
-            this.button5.TabIndex = 44;
+            this.button5.TabIndex = 86;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(827, 540);
+            this.button4.Location = new System.Drawing.Point(734, 524);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 57);
-            this.button4.TabIndex = 45;
+            this.button4.TabIndex = 87;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(827, 456);
+            this.button3.Location = new System.Drawing.Point(734, 440);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 57);
-            this.button3.TabIndex = 46;
+            this.button3.TabIndex = 88;
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.updateButton_Click);
             // 
+            // idKurirTextBox
+            // 
+            this.idKurirTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "Id_kurir", true));
+            this.idKurirTextBox.Location = new System.Drawing.Point(286, 509);
+            this.idKurirTextBox.Name = "idKurirTextBox";
+            this.idKurirTextBox.Size = new System.Drawing.Size(371, 22);
+            this.idKurirTextBox.TabIndex = 83;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(827, 376);
+            this.button2.Location = new System.Drawing.Point(734, 360);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 57);
-            this.button2.TabIndex = 47;
+            this.button2.TabIndex = 89;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // noTelpTextBox
+            // idGudangTextBox
             // 
-            this.noTelpTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "No_telp", true));
-            this.noTelpTextBox.Location = new System.Drawing.Point(380, 575);
-            this.noTelpTextBox.Name = "noTelpTextBox";
-            this.noTelpTextBox.Size = new System.Drawing.Size(371, 22);
-            this.noTelpTextBox.TabIndex = 40;
+            this.idGudangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gudangBindingSource, "Id_gudang", true));
+            this.idGudangTextBox.Location = new System.Drawing.Point(286, 457);
+            this.idGudangTextBox.Name = "idGudangTextBox";
+            this.idGudangTextBox.Size = new System.Drawing.Size(371, 22);
+            this.idGudangTextBox.TabIndex = 84;
             // 
-            // asalTextBox
+            // idKedatanganTextBox
             // 
-            this.asalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "asal_kurir", true));
-            this.asalTextBox.Location = new System.Drawing.Point(379, 525);
-            this.asalTextBox.Name = "asalTextBox";
-            this.asalTextBox.Size = new System.Drawing.Size(371, 22);
-            this.asalTextBox.TabIndex = 41;
+            this.idKedatanganTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kedatanganBindingSource, "Id_kedatangan", true));
+            this.idKedatanganTextBox.Location = new System.Drawing.Point(286, 355);
+            this.idKedatanganTextBox.Name = "idKedatanganTextBox";
+            this.idKedatanganTextBox.Size = new System.Drawing.Size(371, 22);
+            this.idKedatanganTextBox.TabIndex = 82;
             // 
-            // jenisKelaminTextBox
+            // label1
             // 
-            this.jenisKelaminTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "jenis_kelamin", true));
-            this.jenisKelaminTextBox.Location = new System.Drawing.Point(379, 473);
-            this.jenisKelaminTextBox.Name = "jenisKelaminTextBox";
-            this.jenisKelaminTextBox.Size = new System.Drawing.Size(371, 22);
-            this.jenisKelaminTextBox.TabIndex = 42;
-            // 
-            // namaTextBox
-            // 
-            this.namaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "Nama_kurir", true));
-            this.namaTextBox.Location = new System.Drawing.Point(379, 423);
-            this.namaTextBox.Name = "namaTextBox";
-            this.namaTextBox.Size = new System.Drawing.Size(371, 22);
-            this.namaTextBox.TabIndex = 39;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kurirBindingSource, "Id_kurir", true));
-            this.idTextBox.Location = new System.Drawing.Point(379, 371);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(371, 22);
-            this.idTextBox.TabIndex = 38;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(212, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(480, 59);
+            this.label1.TabIndex = 96;
+            this.label1.Text = "Data Kedatangan";
             // 
             // bindingNavigator
             // 
             this.bindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator.BindingSource = this.kurirBindingSource;
+            this.bindingNavigator.BindingSource = this.kedatanganBindingSource;
             this.bindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -330,8 +242,8 @@
             this.bindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator.Name = "bindingNavigator";
             this.bindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator.Size = new System.Drawing.Size(1143, 31);
-            this.bindingNavigator.TabIndex = 53;
+            this.bindingNavigator.Size = new System.Drawing.Size(935, 27);
+            this.bindingNavigator.TabIndex = 97;
             this.bindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
@@ -408,7 +320,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorDeleteItem
@@ -420,13 +332,97 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // KurirPageForm
+            // dataGridView
+            // 
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idkedatanganDataGridViewTextBoxColumn,
+            this.tgldatangDataGridViewTextBoxColumn,
+            this.idgudangDataGridViewTextBoxColumn,
+            this.idkurirDataGridViewTextBoxColumn});
+            this.dataGridView.DataSource = this.kedatanganBindingSource;
+            this.dataGridView.Location = new System.Drawing.Point(95, 147);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(759, 150);
+            this.dataGridView.TabIndex = 98;
+            // 
+            // gudanginventoryDataSet
+            // 
+            this.gudanginventoryDataSet.DataSetName = "gudanginventoryDataSet";
+            this.gudanginventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kedatanganBindingSource
+            // 
+            this.kedatanganBindingSource.DataMember = "kedatangan";
+            this.kedatanganBindingSource.DataSource = this.gudanginventoryDataSet;
+            // 
+            // kedatanganTableAdapter
+            // 
+            this.kedatanganTableAdapter.ClearBeforeFill = true;
+            // 
+            // idkedatanganDataGridViewTextBoxColumn
+            // 
+            this.idkedatanganDataGridViewTextBoxColumn.DataPropertyName = "Id_kedatangan";
+            this.idkedatanganDataGridViewTextBoxColumn.HeaderText = "Id_kedatangan";
+            this.idkedatanganDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idkedatanganDataGridViewTextBoxColumn.Name = "idkedatanganDataGridViewTextBoxColumn";
+            this.idkedatanganDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tgldatangDataGridViewTextBoxColumn
+            // 
+            this.tgldatangDataGridViewTextBoxColumn.DataPropertyName = "tgl_datang";
+            this.tgldatangDataGridViewTextBoxColumn.HeaderText = "tgl_datang";
+            this.tgldatangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tgldatangDataGridViewTextBoxColumn.Name = "tgldatangDataGridViewTextBoxColumn";
+            this.tgldatangDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idgudangDataGridViewTextBoxColumn
+            // 
+            this.idgudangDataGridViewTextBoxColumn.DataPropertyName = "Id_gudang";
+            this.idgudangDataGridViewTextBoxColumn.HeaderText = "Id_gudang";
+            this.idgudangDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idgudangDataGridViewTextBoxColumn.Name = "idgudangDataGridViewTextBoxColumn";
+            this.idgudangDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idkurirDataGridViewTextBoxColumn
+            // 
+            this.idkurirDataGridViewTextBoxColumn.DataPropertyName = "Id_kurir";
+            this.idkurirDataGridViewTextBoxColumn.HeaderText = "Id_kurir";
+            this.idkurirDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idkurirDataGridViewTextBoxColumn.Name = "idkurirDataGridViewTextBoxColumn";
+            this.idkurirDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gudangBindingSource
+            // 
+            this.gudangBindingSource.DataMember = "gudang";
+            this.gudangBindingSource.DataSource = this.gudanginventoryDataSet;
+            // 
+            // gudangTableAdapter
+            // 
+            this.gudangTableAdapter.ClearBeforeFill = true;
+            // 
+            // kurirBindingSource
+            // 
+            this.kurirBindingSource.DataMember = "kurir";
+            this.kurirBindingSource.DataSource = this.gudanginventoryDataSet;
+            // 
+            // kurirTableAdapter
+            // 
+            this.kurirTableAdapter.ClearBeforeFill = true;
+            // 
+            // KedatanganPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 871);
+            this.ClientSize = new System.Drawing.Size(935, 810);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.bindingNavigator);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -435,24 +431,21 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.idKurirTextBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.noTelpTextBox);
-            this.Controls.Add(this.asalTextBox);
-            this.Controls.Add(this.jenisKelaminTextBox);
-            this.Controls.Add(this.namaTextBox);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Name = "KurirPageForm";
-            this.Text = "KurirPageForm";
-            this.Load += new System.EventHandler(this.KurirPageForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kurirBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gudanginventoryDataSet)).EndInit();
+            this.Controls.Add(this.idGudangTextBox);
+            this.Controls.Add(this.idKedatanganTextBox);
+            this.Name = "KedatanganPageForm";
+            this.Text = "KedatanganPageForm";
+            this.Load += new System.EventHandler(this.KedatanganPageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gudanginventoryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kedatanganBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gudangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kurirBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,18 +453,8 @@
 
         #endregion
 
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private gudanginventoryDataSet gudanginventoryDataSet;
-        private System.Windows.Forms.BindingSource kurirBindingSource;
-        private gudanginventoryDataSetTableAdapters.kurirTableAdapter kurirTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idkurirDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namakurirDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jeniskelaminDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn asalkurirDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notelpDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -480,12 +463,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox idKurirTextBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox noTelpTextBox;
-        private System.Windows.Forms.TextBox asalTextBox;
-        private System.Windows.Forms.TextBox jenisKelaminTextBox;
-        private System.Windows.Forms.TextBox namaTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox idGudangTextBox;
+        private System.Windows.Forms.TextBox idKedatanganTextBox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingNavigator bindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -498,5 +480,17 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private gudanginventoryDataSet gudanginventoryDataSet;
+        private System.Windows.Forms.BindingSource kedatanganBindingSource;
+        private gudanginventoryDataSetTableAdapters.kedatanganTableAdapter kedatanganTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idkedatanganDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgldatangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idgudangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idkurirDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource gudangBindingSource;
+        private gudanginventoryDataSetTableAdapters.gudangTableAdapter gudangTableAdapter;
+        private System.Windows.Forms.BindingSource kurirBindingSource;
+        private gudanginventoryDataSetTableAdapters.kurirTableAdapter kurirTableAdapter;
     }
 }

@@ -30,11 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,11 +43,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 9);
+            this.label1.Location = new System.Drawing.Point(236, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 59);
+            this.label1.Size = new System.Drawing.Size(344, 59);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Homepage";
+            this.label1.Text = "Data master";
             // 
             // label2
             // 
@@ -56,6 +57,16 @@
             this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Welcome, Capybara";
+            // 
+            // button5
+            // 
+            this.button5.Image = global::ProjectAkhirCapybaraA.Properties.Resources._3289576_individual_man_people_person_107097;
+            this.button5.Location = new System.Drawing.Point(347, 213);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(128, 71);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // button4
             // 
@@ -97,21 +108,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnBarang_Click);
             // 
-            // button5
+            // button6
             // 
-            this.button5.Image = global::ProjectAkhirCapybaraA.Properties.Resources._3289576_individual_man_people_person_107097;
-            this.button5.Location = new System.Drawing.Point(347, 213);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 71);
-            this.button5.TabIndex = 6;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.btnPemilik_Click);
+            this.button6.Image = global::ProjectAkhirCapybaraA.Properties.Resources.arrow_arrows_back_direction_left_navigation_right_icon_123237;
+            this.button6.Location = new System.Drawing.Point(12, 398);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(92, 40);
+            this.button6.TabIndex = 9;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -120,7 +132,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "HomePageForm";
-            this.Text = "Form2";
+            this.Text = "Inventory App";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

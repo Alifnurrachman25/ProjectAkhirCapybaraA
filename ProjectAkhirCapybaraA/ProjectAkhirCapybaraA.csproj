@@ -52,6 +52,24 @@
     <Compile Include="BarangPageForm.Designer.cs">
       <DependentUpon>BarangPageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataRelasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataRelasiForm.Designer.cs">
+      <DependentUpon>DataRelasiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DikelolaPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DikelolaPageForm.Designer.cs">
+      <DependentUpon>DikelolaPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DikirimPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DikirimPageForm.Designer.cs">
+      <DependentUpon>DikirimPageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="gudanginventoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +80,12 @@
     </Compile>
     <Compile Include="InventoryPageForm.Designer.cs">
       <DependentUpon>InventoryPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KedatanganPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KedatanganPageForm.Designer.cs">
+      <DependentUpon>KedatanganPageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KurirPageForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +105,18 @@
     <Compile Include="HomePageForm.Designer.cs">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemilikiPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemilikiPageForm.Designer.cs">
+      <DependentUpon>MemilikiPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionPageForm.Designer.cs">
+      <DependentUpon>OptionPageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PemilikPageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,17 +134,35 @@
     <EmbeddedResource Include="BarangPageForm.resx">
       <DependentUpon>BarangPageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataRelasiForm.resx">
+      <DependentUpon>DataRelasiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DikelolaPageForm.resx">
+      <DependentUpon>DikelolaPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DikirimPageForm.resx">
+      <DependentUpon>DikirimPageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryPageForm.resx">
       <DependentUpon>InventoryPageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KedatanganPageForm.resx">
+      <DependentUpon>KedatanganPageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KurirPageForm.resx">
       <DependentUpon>KurirPageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemilikiPageForm.resx">
+      <DependentUpon>MemilikiPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPageForm.resx">
+      <DependentUpon>OptionPageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PemilikPageForm.resx">
       <DependentUpon>PemilikPageForm.cs</DependentUpon>

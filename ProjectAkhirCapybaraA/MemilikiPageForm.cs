@@ -39,7 +39,9 @@ namespace ProjectAkhirCapybaraA
             this.memilikiTableAdapter.Fill(this.gudanginventoryDataSet.memiliki);
 
             ConnectToDatabase();
-
+            LoadComboBoxPemilik();
+            LoadComboBoxBarang();
+            
         }
 
         public DataTable GetMemiliki()
@@ -95,8 +97,8 @@ namespace ProjectAkhirCapybaraA
         private void addButton_Click(object sender, EventArgs e)
         {
             int idKepemilikan = Convert.ToInt32(IdKepemilikanTextBox.Text);
-            int idPemilik = Convert.ToInt32(IdPemilikTextBox.Text);
-            int idBarang = Convert.ToInt32(IdBarangTextBox.Text);
+            int idPemilik = Convert.ToInt32(idPemilikCmbBox.Text);
+            int idBarang = Convert.ToInt32(idBarangCmbBox.Text);
 
             ConnectToDatabase();
             AddMemiliki(idKepemilikan, idPemilik, idBarang);
@@ -108,8 +110,8 @@ namespace ProjectAkhirCapybaraA
         private void updateButton_Click(object sender, EventArgs e)
         {
             int idKepemilikan = Convert.ToInt32(IdKepemilikanTextBox.Text);
-            int idPemilik = Convert.ToInt32(IdPemilikTextBox.Text);
-            int idBarang = Convert.ToInt32(IdBarangTextBox.Text);
+            int idPemilik = Convert.ToInt32(idPemilikCmbBox.Text);
+            int idBarang = Convert.ToInt32(idBarangCmbBox.Text);
 
             ConnectToDatabase();
             UpdateMemiliki(idKepemilikan, idPemilik, idBarang);
@@ -132,8 +134,6 @@ namespace ProjectAkhirCapybaraA
         private void clearButton_Click(object sender, EventArgs e)
         {
             IdKepemilikanTextBox.Clear();
-            IdPemilikTextBox.Clear();
-            IdBarangTextBox.Clear();       
         }
 
         private void RefreshDataGridView()
@@ -156,6 +156,38 @@ namespace ProjectAkhirCapybaraA
             DataRelasiForm dataRelasi = new DataRelasiForm();
             this.Close();
             dataRelasi.Show();
+        }
+
+        private void LoadComboBoxBarang()
+        {
+            string query = "SELECT Id_barang FROM barang";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idBarang = reader["Id_barang"].ToString();
+                idBarangCmbBox.Items.Add(idBarang);
+            }
+
+            reader.Close();
+        }
+
+        private void LoadComboBoxPemilik()
+        {
+            string query = "SELECT Id_pemilik FROM pemilik";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idPemilik = reader["Id_pemilik"].ToString();
+                idPemilikCmbBox.Items.Add(idPemilik);
+            }
+
+            reader.Close();
         }
     }
 }

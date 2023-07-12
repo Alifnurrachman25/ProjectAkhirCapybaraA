@@ -41,6 +41,9 @@ namespace ProjectAkhirCapybaraA
             // TODO: This line of code loads data into the 'gudanginventoryDataSet.dikelola' table. You can move, or remove it, as needed.
             this.dikelolaTableAdapter.Fill(this.gudanginventoryDataSet.dikelola);
 
+            ConnectToDatabase();
+            LoadComboBoxGudang();
+            LoadComboBoxStaff();
         }
 
         public DataTable GetDikelola()
@@ -96,8 +99,8 @@ namespace ProjectAkhirCapybaraA
         private void addButton_Click(object sender, EventArgs e)
         {
             int idKelola = Convert.ToInt32(idKelolaTextBox.Text);
-            int idGudang = Convert.ToInt32(idGudangTextBox.Text);
-            int idStaff = Convert.ToInt32(idStaffTextBox.Text);
+            int idGudang = Convert.ToInt32(idGudangCmbBox.Text);
+            int idStaff = Convert.ToInt32(idStaffCmbBox.Text);
 
             ConnectToDatabase();
             AddDikelola(idKelola, idGudang, idStaff);
@@ -109,8 +112,8 @@ namespace ProjectAkhirCapybaraA
         private void updateButton_Click(object sender, EventArgs e)
         {
             int idKelola = Convert.ToInt32(idKelolaTextBox.Text);
-            int idGudang = Convert.ToInt32(idGudangTextBox.Text);
-            int idStaff = Convert.ToInt32(idStaffTextBox.Text);
+            int idGudang = Convert.ToInt32(idGudangCmbBox.Text);
+            int idStaff = Convert.ToInt32(idStaffCmbBox.Text);
 
             ConnectToDatabase();
             UpdateDikelola(idKelola, idGudang, idStaff);
@@ -134,8 +137,6 @@ namespace ProjectAkhirCapybaraA
         private void clearButton_Click(object sender, EventArgs e)
         {
             idKelolaTextBox.Clear();
-            idGudangTextBox.Clear();
-            idStaffTextBox.Clear();
         }
 
         private void RefreshDataGridView()
@@ -158,6 +159,38 @@ namespace ProjectAkhirCapybaraA
             DataRelasiForm dataRelasi = new DataRelasiForm();
             this.Close();
             dataRelasi.Show();
+        }
+
+        private void LoadComboBoxGudang()
+        {
+            string query = "SELECT Id_gudang FROM gudang";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idGudang = reader["Id_gudang"].ToString();
+                idGudangCmbBox.Items.Add(idGudang);
+            }
+
+            reader.Close();
+        }
+
+        private void LoadComboBoxStaff()
+        {
+            string query = "SELECT Id_staff FROM staff";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idStaff = reader["Id_staff"].ToString();
+                idStaffCmbBox.Items.Add(idStaff);
+            }
+
+            reader.Close();
         }
     }
 }

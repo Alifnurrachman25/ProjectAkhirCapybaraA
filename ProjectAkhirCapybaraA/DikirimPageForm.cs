@@ -40,8 +40,10 @@ namespace ProjectAkhirCapybaraA
             this.barangTableAdapter.Fill(this.gudanginventoryDataSet.barang);
             // TODO: This line of code loads data into the 'gudanginventoryDataSet.dikirim' table. You can move, or remove it, as needed.
             this.dikirimTableAdapter.Fill(this.gudanginventoryDataSet.dikirim);
-
             ConnectToDatabase();
+
+            LoadComboBoxBarang();
+            LoadComboBoxKurir();
         }
 
         public DataTable GetDikirim()
@@ -100,8 +102,8 @@ namespace ProjectAkhirCapybaraA
         {
             int idPengiriman = Convert.ToInt32(idPengirimanTextBox.Text);
             DateTime tglKirim = Convert.ToDateTime(dateTimePicker1.Text);
-            int idBarang = Convert.ToInt32(idBarangTextBox.Text);
-            int idKurir = Convert.ToInt32(idKurirTextBox.Text);
+            int idBarang = Convert.ToInt32(idBarangCmbBox.Text);
+            int idKurir = Convert.ToInt32(idKurirCmbBox.Text);
 
             ConnectToDatabase();
             AddDikirim(idPengiriman, tglKirim, idBarang, idKurir);
@@ -114,8 +116,8 @@ namespace ProjectAkhirCapybaraA
         {
             int idPengiriman = Convert.ToInt32(idPengirimanTextBox.Text);
             DateTime tglKirim = Convert.ToDateTime(dateTimePicker1.Text);
-            int idBarang = Convert.ToInt32(idBarangTextBox.Text);
-            int idKurir = Convert.ToInt32(idKurirTextBox.Text);
+            int idBarang = Convert.ToInt32(idBarangCmbBox.Text);
+            int idKurir = Convert.ToInt32(idKurirCmbBox.Text);
 
             ConnectToDatabase();
             UpdateDikirim(idPengiriman, tglKirim, idBarang, idKurir);
@@ -138,9 +140,6 @@ namespace ProjectAkhirCapybaraA
         private void clearButton_Click(object sender, EventArgs e)
         {
             idPengirimanTextBox.Clear();
-            
-            idBarangTextBox.Clear();
-            idKurirTextBox.Clear();
         }
 
         private void RefreshDataGridView()
@@ -163,6 +162,39 @@ namespace ProjectAkhirCapybaraA
             DataRelasiForm dataRelasi = new DataRelasiForm();
             this.Close();
             dataRelasi.Show();
+        }
+
+
+        private void LoadComboBoxBarang()
+        {
+            string query = "SELECT Id_barang FROM barang";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idBarang = reader["Id_barang"].ToString();
+                idBarangCmbBox.Items.Add(idBarang);
+            }
+
+            reader.Close();
+        }
+
+        private void LoadComboBoxKurir()
+        {
+            string query = "SELECT Id_kurir FROM kurir";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string idKurir = reader["Id_kurir"].ToString();
+                idKurirCmbBox.Items.Add(idKurir);
+            }
+
+            reader.Close();
         }
     }
 }
